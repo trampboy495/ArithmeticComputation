@@ -27,3 +27,4 @@ for (( i=$(($n-1)); i>=0; i-- ))
 do
 	echo "Result in descending order ${array[i]}"
 done
+echo "Result in ascending order ${array[*]}"

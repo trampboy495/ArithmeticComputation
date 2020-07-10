@@ -6,3 +6,8 @@ Computation3=$((c+a/b))
 Computation4=$((a%b+c))
 declare -A ComputationResult
 ComputationResult=([1]=$Computation1 [2]=$Computation2 [3]=$Computation3 [4]=$Computation4)
+counter=0
+for i in ${!ComputationResult[@]}
+do
+	array[ ((counter++)) ]=${ComputationResult[$i]}
+done
